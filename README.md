@@ -5,7 +5,7 @@ Self-service facility typically provides users with the capability to change one
 Verified Email Address Change workflow is provided as a customized extensibility solution, that leverages Auth0 functionality to address the sort of problems that can occur in unverified email address change scenarios. For further information regarding this, or any other Auth0 customized extensibility provided, please feel free to get in touch. 
 
 <div align="center">
-  <a href="https://youtu.be/RMza7El7IwE"><img src="./Verified%20Email%20Address%20Change.png" alt="Verified Email Address Change workflow in Auth0"></a>
+  <a href="https://auth0-1.wistia.com/medias/aycyjyjxqh"><img src="./Verified%20Email%20Address%20Change.png" alt="Verified Email Address Change workflow in Auth0"></a>
 </div>
 
 ## Design documentation
