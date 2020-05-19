@@ -18,7 +18,7 @@ We provide Custom Implementation for a wide range of use cases not supported out
 
 Detailed design documentation (click link above to access) provides you with a comprehensive set of information that is implementation agnostic. Using this, you and your team can implement Verified Email Address Change workflow whatever the technology stack you currently, or indeed plan, to utilize. The information is provided free of charge and without warranty (either explicit or implied).    
 
-## About Auth0?
+## About Auth0
 
 Auth0 is the flagship Platform-as-a-Service (PaaS) Identity and Access Management service from the company of the same same. Auth0 helps you to easily:
 
