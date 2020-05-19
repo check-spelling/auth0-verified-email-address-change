@@ -16,7 +16,7 @@ We provide Custom Implementation for a wide range of use cases not supported out
   <a href="https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw"><img src="./Verified%20Email%20Address%20Change%20Design.png" alt="Verified Email Address Change workflow in Auth0 - Design Document"></a>
 </div>
 
-Detailed design documentation (click link above to access) provides you with comprehensive information that is implementation agnostic. Using this, you and your team can implement Verified Email Address Change workflow whatever the technology stack you currently, or indeed plan, to utilize. The information is provided free of charge and without warranty (either explicit or implied).    
+Detailed design documentation (click link above to access) provides you with a comprehensive set of information that is implementation agnostic. Using this, you and your team can implement Verified Email Address Change workflow whatever the technology stack you currently, or indeed plan, to utilize. The information is provided free of charge and without warranty (either explicit or implied).    
 
 ## About Auth0?
 
@@ -39,5 +39,5 @@ If you have found a bug or if you have a feature request, please report them via
 
 ## License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE. Please see the [LICENSE](LICENSE) file for more info.
+This project is licensed under an MIT LICENSE. Please see the [LICENSE](LICENSE) file for more info.
 
