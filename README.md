@@ -10,13 +10,29 @@ Verified Email Address Change workflow is provided as a customized extensibility
 
 ## Design documentation
 
-We provide Custom Implementation for a wide range of use cases not supported out-of-the-box in Auth0, across a wide range of use case scenarios. Our services can be leveraged to provide you with a complete solution for Verified Email Address Change - in either a stand-alone fashion or in conjunction with other customization. However we also provide you with full design documentation (see below) if you prefer to implement yourself.  
+[Custom Implementation](https://auth0.com/docs/services/packages#-custom-implementation-package-) to support functionality not supported out-of-the-box is provided by Auth0, and offers a wide variety of services to address a number of use case scenarios. These services can be leveraged to provide you with a complete solution for Verified Email Address Change - in either a stand-alone fashion or in conjunction with other customization. However we also provide you with full design documentation (see below) if you prefer to implement yourself.  
 
 <div align="center">
   <a href="https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw"><img src="./Verified%20Email%20Address%20Change%20Design.png" alt="Verified Email Address Change workflow in Auth0 - Design Document"></a>
 </div>
 
-Detailed design documentation (click link above to access) provides you with a comprehensive set of information that is implementation agnostic. Using this, you and your team can implement Verified Email Address Change workflow whatever the technology stack you currently, or indeed plan, to utilize. The information is provided free of charge and without warranty (either explicit or implied).    
+Detailed design documentation (follow link above to access) provides you with a comprehensive set of information that is implementation agnostic. Using this, you and your team can implement Verified Email Address Change workflow whatever the technology stack you currently, or indeed plan, to utilize. The information is provided free of charge and without warranty (either explicit or implied).    
+
+## Sample implementation
+
+This repository also contains sample implementation developed using [Node.js](https://nodejs.org/en/), and is provided to accelerate development of that part of the design which deals with actual [email address change](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.7i3duzkz1ihl). This implementation is provided free of charge and without warranty either explicit or implied. Please note that no sample implementation is provided for that part of the design dealing with [email address change initiation](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.2zd5mvs4taxv).
+
+### Profile Management Application
+
+The Profile [client](Profile/client) folder contains sample Node.js implementation 
+
+### Profile Management Service
+
+The Profile [service](Profile/service) folder contains sample Node.js implementation 
+
+ and the [Express](https://expressjs.com/) framework
+
+### Auth0 Configuration
 
 ## About Auth0
 
@@ -25,7 +41,7 @@ Auth0 is the flagship Platform-as-a-Service (PaaS) Identity and Access Managemen
 - authenticate using multiple identity providers, including social (e.g. Google, Facebook, Microsoft, LinkedIn, GitHub, Twitter, etc), or enterprise (e.g. Windows Azure AD, Google Apps, Active Directory, ADFS, SAML, etc),
 - authenticate users via username/password, or passwordless mechanisms,
 - implement multi-factor authentication,
-- link multiple user identities to a single user accounts, 
+- link multiple user identities to a single user account, 
 - generate signed JSON Web Tokens to authorize API calls and flow user identity securely,
 - access demographics and analytics, detailing how, when, and where users are logging in
 - enrich user profiles from other data sources using customizable JavaScript Rules,
