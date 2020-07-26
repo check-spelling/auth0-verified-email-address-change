@@ -1,12 +1,18 @@
 # Auth0 Tenant Configuration
 
-This section of the repository contains files for Auth0 Tenant configuration and asset definition. The files are organized to be used with the [Auth0 Deploy CLI tooling](https://auth0.com/docs/extensions/deploy-cli) using Directory format specification. The files can be utilized as-is, however review - of asset naming and/or associated asset description, for example - is recommended before deploying. 
+This section of the repository contains files for [Auth0 Tenant](https://auth0.com/docs/getting-started/the-basics#account-and-tenants) configuration and asset definition. The files are organized to be used with the [Auth0 Deploy CLI tooling](https://auth0.com/docs/extensions/deploy-cli) using Directory format specification. Configuration can utilized as-is, however review - e.g. of asset naming and/or associated asset description, for example - is recommended before deploying. 
 
 ## `clients`
 
+This folder contains the [Auth0 Application](https://auth0.com/docs/applications) (a.k.a. Client) definitions, for both the Profile Managemnt application and the Profile Management Service implemented as part of Verified Email Address Change, and as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw).
+
 ## `resource-servers`
 
+This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the Profile Managemnt API route(s) that typically forms part of the Profile Management Service for Verified Email Address Change as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw).
+
 ## `rules`
+
+This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw).
 
 ## About Auth0
 
@@ -21,7 +27,7 @@ Auth0 is the flagship Platform-as-a-Service (PaaS) Identity and Access Managemen
 - enrich user profiles from other data sources using customizable JavaScript Rules,
 - and much, much more.
  
-Go to [Auth0](https://auth0.com) and click Sign Up to create a free account in Auth0, although the customized extensibility provided here requires Auth0 functionality only available to paid subscribers.
+Go to [Auth0](https://auth0.com) and click Sign Up to create a free account.
 
 ## Issue Reporting
 
