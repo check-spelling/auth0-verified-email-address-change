@@ -1,0 +1,17 @@
+{
+  "name": "Profile Management API",
+  "identifier": "<Profile Audience>",
+  "allow_offline_access": true,
+  "skip_consent_for_verifiable_first_party_clients": true,
+  "token_lifetime": 86400,
+  "token_lifetime_for_web": 3600,
+  "signing_alg": "RS256",
+  "scopes": [
+    {
+      "value": "update:email",
+      "description": "Update Email"
+    }
+  ],
+  "enforce_policies": true,
+  "token_dialect": "access_token"
+}

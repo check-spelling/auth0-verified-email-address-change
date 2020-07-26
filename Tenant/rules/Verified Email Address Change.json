@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "script": "./Verified Email Address Change.js",
+  "name": "Verified Email Address Change",
+  "order": 7,
+  "stage": "login_success"
+}
