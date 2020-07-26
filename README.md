@@ -10,7 +10,7 @@ Verified Email Address Change workflow is provided as a customized extensibility
 
 ## Design documentation
 
-[Custom Implementation](https://auth0.com/docs/services/packages#-custom-implementation-package-) to support functionality not supported out-of-the-box is provided by Auth0, and offers a wide variety of services to address a number of use case scenarios. These services can be leveraged to provide you with a complete solution for Verified Email Address Change - in either a stand-alone fashion or in conjunction with other customization. However we also provide you with full design documentation (see below) if you prefer to implement yourself.  
+[Custom Implementation Services](https://auth0.com/docs/services/packages#-custom-implementation-package-) to support functionality not supported out-of-the-box are provided by Auth0, and a wide variety of services are offered to help address a number of use case scenarios. These services can be leveraged to provide you with a complete solution for Verified Email Address Change - in either a stand-alone fashion or in conjunction with other customization. However we also provide you with full design documentation (see below) if you prefer to implement yourself.  
 
 <div align="center">
   <a href="https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw"><img src="./Verified%20Email%20Address%20Change%20Design.png" alt="Verified Email Address Change workflow in Auth0 - Design Document"></a>
@@ -47,7 +47,7 @@ Auth0 is the flagship Platform-as-a-Service (PaaS) Identity and Access Managemen
 - enrich user profiles from other data sources using customizable JavaScript Rules,
 - and much, much more.
  
-Go to [Auth0](https://auth0.com) and click Sign Up to create a free account in Auth0, although the customized extensibility provided here requires Auth0 functionality only available to paid subscribers.
+Go to [Auth0](https://auth0.com) and click Sign Up to create a free account.
 
 ## Issue Reporting
 
