@@ -16,7 +16,7 @@ This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essenti
 
 ## About Auth0
 
-Auth0 is the flagship Platform-as-a-Service (PaaS) Identity and Access Management service from the company of the same same. Auth0 helps you to easily:
+Auth0 is the flagship Platform-as-a-Service (PaaS) Identity and Access Management service from the company of the same name. Auth0 helps you to easily:
 
 - authenticate using multiple identity providers, including social (e.g. Google, Facebook, Microsoft, LinkedIn, GitHub, Twitter, etc), or enterprise (e.g. Windows Azure AD, Google Apps, Active Directory, ADFS, SAML, etc),
 - authenticate users via username/password, or passwordless mechanisms,
