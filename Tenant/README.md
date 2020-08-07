@@ -1,18 +1,41 @@
 # Auth0 Tenant Configuration
 
-This section of the repository contains files for [Auth0 Tenant](https://auth0.com/docs/getting-started/the-basics#account-and-tenants) configuration and asset definition. The files are organized to be used with the [Auth0 Deploy CLI tooling](https://auth0.com/docs/extensions/deploy-cli) using Directory format specification. Configuration can utilized as-is, however review - e.g. of asset naming and/or associated asset description, for example - is recommended before deploying. 
+This section of the repository contains files for [Auth0 Tenant](https://auth0.com/docs/getting-started/the-basics#account-and-tenants) configuration and asset definition. The files are organized to be used with the [Auth0 Deploy CLI tooling](https://auth0.com/docs/extensions/deploy-cli) using Directory format specification. 
+
+Prior to deployment, there are aspects of configuration that will need to be customized and for each asset the specifics are discussed in the relevant section below. In general we also recommend that asset naming and/or associated asset description is also reviewed prior to deployment. **Note: depending on the age of your Auth0 Tenant you may also need to [Enabled seamless SSO](https://auth0.com/docs/dashboard/guides/tenants/enable-sso-tenant) in your Auth0 Tenant Settings**
 
 ## [`clients`](./clients)
 
-This folder contains the [Auth0 Application](https://auth0.com/docs/applications) (a.k.a. Client) definitions, for both the Profile Managemnt application and the Profile Management Service implemented as part of Verified Email Address Change, and as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw).
+This folder contains the [Auth0 Application](https://auth0.com/docs/applications) (a.k.a. Client) definitions, for both the _Profile Managemnt_ client and the _Profile Management Service_ implemented external (to Auth0) as part of Verified Email Address Change, and as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there are a number of specific aspects for each client definition that should be reviewed and customized:
+
+- _**Allowed Callback URLs**_ (`callbacks`; see [Application Settings](https://auth0.com/docs/dashboard/reference/settings-application) for further details) should be modified, and `localhost` definitions should be replaced with the respective domain where each asset is hosted.
+
+- _**Allowed Logout URLs**_ (`allowed_logout_urls`; see [Application Settings](https://auth0.com/docs/dashboard/reference/settings-application) for further details) should be modified, and `localhost` definitions should be replaced with the respective domain where each asset is hosted.
+
+- _**Allowed Web Origins**_ (`allowed_origins`; see [Application Settings](https://auth0.com/docs/dashboard/reference/settings-application) for further details) should be modified, and `localhost` definitions should be replaced with the respective domain where each asset is hosted.
 
 ## [`resource-servers`](./resource-servers)
 
-This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the Profile Managemnt API route(s) that typically forms part of the Profile Management Service for Verified Email Address Change as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw).
+This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the _Profile Managemnt API_ route(s) - implemented extrnal to Auth0 - that forms part of the Profile Management Service for Verified Email Address Change as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there is one specific aspect for the reseource server definition that should be reviewed and customized:
+
+- _**Identifier**_ (`identifier`; see [API Settings](https://auth0.com/docs/dashboard/reference/settings-api) for further details) should be modified, and `localhost` definitions should be replaced. The identifier for an API is in URI format - this is not a URL to the API - and the recommendation would be to use your organizations domain name here as the replacement.
+
 
 ## [`rules`](./rules)
 
-This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw).
+This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Once deployed, the following Rule [Settings](https://auth0.com/docs/rules/guides/configuration#configure-values) will nedd to be configued:
+
+- `DEBUG` (optional): set to `true` te enable debug logging via use of the Auth0 [Real-time Webtask Logs Extension](https://auth0.com/docs/extensions/realtime-webtask-logs).
+
+- `PROFILE_CLIENT`: set to the **Client ID** of the _Profile Management_ Application definition in Auth0.
+
+- `PROFILE_SERVICE`: set to the **Client ID** of the _Profile Management Service_ Application definition in Auth0.
+
+- `PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0. Implementation will also use this value as the Namespace for the Profile Management [Custom Claims](https://auth0.com/docs/tokens/guides/create-namespaced-custom-claims) added to the [ID Token](https://auth0.com/docs/tokens/concepts/id-tokens) and [Access Token](https://auth0.com/docs/tokens/concepts/access-tokens).
+
+- `PROFILE_REDIRECT`: set to the base URL of the proprietry Profile Management functionality implemented outside of Auth0 (e.g. `https://hipster.cevolution.co.uk/Profile`). As already discussed, implementation expects the following organization of functionality under this URL 
+	- `client`: 
+	- `service`: 
 
 ## About Auth0
 
