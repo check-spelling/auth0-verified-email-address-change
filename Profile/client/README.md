@@ -1,10 +1,10 @@
 # Profile Management Client
 
-This section of the repository contains reference implementation for the Profile Management Client functionality to be implemented external to Auth0. You can use this implementation as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. Client reference implemetation is built as a [React](https://reactjs.org/) application using [Node.js](https://nodejs.org/en/). **Note: all implementation provided has been built and tested using Node.js version 12.18**
+This section of the repository contains reference implementation for the Profile Management Client functionality to be implemented external to Auth0. You can use this implementation as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. Client reference implemetation is built as a [React](https://reactjs.org/) application using [Node.js](https://nodejs.org/en/). For a general overview of Profile Management functionality see the readme in the containing [folder](..) **Note: all implementation provided has been built and tested using Node.js version 12.18**
 
 ## Deployment Environment
 
-The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0. For the latter, [Heroku](https://www.heroku.com) is often used as a Node.js hosting environment, as is Amazon Web Services - utilizing something like [AWS Lambda](https://aws.amazon.com/lambda/). 
+The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0; for the latter, [Heroku](https://www.heroku.com) is often used as a Node.js hosting environment, as is Amazon Web Services - utilizing something like [AWS Lambda](https://aws.amazon.com/lambda/). 
 
 ### Environment Variables
 

@@ -24,11 +24,11 @@ This repository also contains reference implementation developed using [Node.js]
 
 ### Profile Management
 
-The [Profile](Profile) folder contains sample Node.js implementation that can be used as a basis to build out Profile Management functionality in order to support Verified Email Address Change. For further details please refer to the [readme](Profile) contained in the folder.
+The [Profile](Profile) folder contains reference Node.js implementation that can be used as a basis to build out Profile Management functionality in order to support Verified Email Address Change. For further details please refer to the [readme](Profile) contained in the folder.
 
 ### Auth0 Configuration
 
-The [Tenant](Tenant) folder contains ...
+The [Tenant](tenant) folder contains reference Auth0 Tenant configuration and asset definitions that can be used as a basis to build out functionality in order to support Verified Email Address Change. For further details please refer to the [readme](Tenant) contained in the folder.
 
 ## About Auth0
 
