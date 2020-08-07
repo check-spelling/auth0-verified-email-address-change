@@ -18,9 +18,9 @@ Verified Email Address Change workflow is provided as a customized extensibility
 
 Detailed design documentation (follow link above to access) provides you with a comprehensive set of information that is implementation agnostic. Using this, you and your team can implement Verified Email Address Change workflow whatever the technology stack you currently, or indeed plan, to utilize. The information is provided free of charge and without warranty (either explicit or implied).    
 
-## Sample implementation
+## Reference implementation
 
-This repository also contains sample implementation developed using [Node.js](https://nodejs.org/en/), and is provided to accelerate development of that part of the design which deals with actual [email address change](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.7i3duzkz1ihl). This implementation is provided free of charge and without warranty either explicit or implied. Please note that no sample implementation is provided for that part of the design dealing with [email address change initiation](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.2zd5mvs4taxv).
+This repository also contains reference implementation developed using [Node.js](https://nodejs.org/en/), and is provided to accelerate development of that part of the design which deals with actual [email address change](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.7i3duzkz1ihl). This implementation is provided free of charge and without warranty either explicit or implied. Please note that no sample implementation is provided for that part of the design dealing with [email address change initiation](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.2zd5mvs4taxv).
 
 ### Profile Management
 
