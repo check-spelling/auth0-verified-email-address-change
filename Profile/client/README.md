@@ -18,7 +18,6 @@ Whatever environment you choose to utilize, before deploying the reference imple
 
 - `REACT_APP_PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more detais). 
 
-
 ## Issue Reporting
 
 If you have found a bug or if you have a feature request, please report them via the issues section of this repository. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
