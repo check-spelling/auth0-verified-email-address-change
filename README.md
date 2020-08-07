@@ -24,7 +24,7 @@ This repository also contains sample implementation developed using [Node.js](ht
 
 ### Profile Management
 
-The [Profile](Profile) folder contains sample Node.js implementation that can be used as a basis to build out Profile Management functionality in order to support Verified Email Address Change. For further details check out the [readme](Profile) contained in the folder.
+The [Profile](Profile) folder contains sample Node.js implementation that can be used as a basis to build out Profile Management functionality in order to support Verified Email Address Change. For further details please refer to the [readme](Profile) contained in the folder.
 
 ### Auth0 Configuration
 
