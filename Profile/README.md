@@ -8,11 +8,11 @@ This section of the repository contains reference implementation for the Profile
 
 ## Client
 
-The [Client](Profile/client) folder contains reference [Node.js](https://nodejs.org/en/) implementation for the interactive Profile Client application which provides the User Interface Experience (UI/UX) as part of Verified Email Address Change [Redirect](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.v0omkqzfjvqw) processing. For further details please refer to the [readme](Client) contained in the folder.
+The [`client`](client) folder contains reference [Node.js](https://nodejs.org/en/) implementation for the interactive Profile Client application which provides the User Interface Experience (UI/UX) as part of Verified Email Address Change [Redirect](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.v0omkqzfjvqw) processing. For further details please refer to the [readme](Client) contained in the folder.
 
 ## Service
 
-The [Client](Profile/client) folder contains reference [Node.js](https://nodejs.org/en/) implementation for the Profile Service which provides backend processing as part of Verified Email Address Change [Redirect](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.v0omkqzfjvqw) processing. For further details please refer to the [readme](service) contained in the folder.
+The [`service`](service) folder contains reference [Node.js](https://nodejs.org/en/) implementation for the Profile Service which provides backend processing as part of Verified Email Address Change [Redirect](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.v0omkqzfjvqw) processing. For further details please refer to the [readme](service) contained in the folder.
 
 
  and the [Express](https://expressjs.com/) framework
