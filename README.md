@@ -26,16 +26,6 @@ This repository also contains sample implementation developed using [Node.js](ht
 
 The [Profile](Profile) folder contains sample Node.js implementation that can be used as a basis to build out Profile Management functionality in order to support Verified Email Address Change. For further details check out the [readme](Profile) contained in the folder.
 
-### Profile Management Application
-
-The Profile [client](Profile/client) folder contains sample Node.js implementation 
-
-### Profile Management Service
-
-The Profile [service](Profile/service) folder contains sample Node.js implementation 
-
- and the [Express](https://expressjs.com/) framework
-
 ### Auth0 Configuration
 
 The [Tenant](Tenant) folder contains ...
