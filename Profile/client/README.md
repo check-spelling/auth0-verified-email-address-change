@@ -1,6 +1,6 @@
 # Profile Management Client
 
-This section of the repository contains reference implementation for the Profile Management Client functionality implemented external to Auth0. You can use this implementation as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. Client reference implemetation is built as a [React](https://reactjs.org/) application using [Node.js](https://nodejs.org/en/). **Note: all implementation provided has been built and tested using Node.js version 12.18**
+This section of the repository contains reference implementation for the Profile Management Client functionality to be implemented external to Auth0. You can use this implementation as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. Client reference implemetation is built as a [React](https://reactjs.org/) application using [Node.js](https://nodejs.org/en/). **Note: all implementation provided has been built and tested using Node.js version 12.18**
 
 ## Deployment Environment
 
