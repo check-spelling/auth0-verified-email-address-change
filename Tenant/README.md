@@ -1,8 +1,6 @@
 # Auth0 Tenant Configuration
 
-This section of the repository contains files for [Auth0 Tenant](https://auth0.com/docs/getting-started/the-basics#account-and-tenants) configuration and asset definition. The files are organized to be used with the [Auth0 Deploy CLI tooling](https://auth0.com/docs/extensions/deploy-cli) using Directory format specification. 
-
-Prior to deployment, there are aspects of configuration that will need to be customized and for each asset the specifics are discussed in the relevant section below. In general we also recommend that asset naming and/or associated asset description is also reviewed prior to deployment. **Note: depending on the age of your Auth0 Tenant you may also need to [Enabled seamless SSO](https://auth0.com/docs/dashboard/guides/tenants/enable-sso-tenant) in your Auth0 Tenant Settings**
+This section of the repository contains files for [Auth0 Tenant](https://auth0.com/docs/getting-started/the-basics#account-and-tenants) configuration and asset definition. The files are organized to be used with the [Auth0 Deploy CLI tooling](https://auth0.com/docs/extensions/deploy-cli) using Directory format specification. Prior to deployment, there are aspects of configuration that will need to be customized and for each asset the specifics are discussed in the relevant section below. In general we also recommend that asset naming and/or associated asset description is also reviewed prior to deployment. **Note: depending on the age of your Auth0 Tenant you may also need to [Enabled seamless SSO](https://auth0.com/docs/dashboard/guides/tenants/enable-sso-tenant) in your Auth0 Tenant Settings**
 
 ## [`clients`](./clients)
 
