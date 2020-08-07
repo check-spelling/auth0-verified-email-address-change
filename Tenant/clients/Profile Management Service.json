@@ -7,7 +7,7 @@
   "cross_origin_auth": false,
   "allowed_clients": [],
   "allowed_logout_urls": [
-    "http://localhost:3000/Profile/service/event/callout"
+    "http://localhost:3030/Profile/service/event/callout"
   ],
   "callbacks": [
     "http://localhost:3030/Profile/service/event/callback"

@@ -1,6 +1,6 @@
 {
   "name": "Profile Management API",
-  "identifier": "<Profile Audience>",
+  "identifier": "https://localhost/profile",
   "allow_offline_access": true,
   "skip_consent_for_verifiable_first_party_clients": true,
   "token_lifetime": 86400,

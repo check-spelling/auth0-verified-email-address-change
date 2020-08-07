@@ -8,10 +8,10 @@
   "description": "Profile Management Client",
   "sso": false,
   "callbacks": [
-    "http://localhost:3000"
+    "http://localhost:3000/Profile/client"
   ],
   "allowed_logout_urls": [
-    "http://localhost:3000"
+    "http://localhost:3000/Profile/client"
   ],
   "allowed_clients": [],
   "native_social_login": {
