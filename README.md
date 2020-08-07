@@ -22,6 +22,10 @@ Detailed design documentation (follow link above to access) provides you with a 
 
 This repository also contains sample implementation developed using [Node.js](https://nodejs.org/en/), and is provided to accelerate development of that part of the design which deals with actual [email address change](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.7i3duzkz1ihl). This implementation is provided free of charge and without warranty either explicit or implied. Please note that no sample implementation is provided for that part of the design dealing with [email address change initiation](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.2zd5mvs4taxv).
 
+### Profile Management
+
+The [Profile](Profile) folder contains sample Node.js implementation that can be used as a basis to build out Profile Management functionality in order to support Verified Email Address Change. For further details check out the [readme](Profile) contained in the folder.
+
 ### Profile Management Application
 
 The Profile [client](Profile/client) folder contains sample Node.js implementation 
@@ -33,6 +37,8 @@ The Profile [service](Profile/service) folder contains sample Node.js implementa
  and the [Express](https://expressjs.com/) framework
 
 ### Auth0 Configuration
+
+The [Tenant](Tenant) folder contains ...
 
 ## About Auth0
 
