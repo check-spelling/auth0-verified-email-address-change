@@ -4,11 +4,11 @@ This section of the repository contains reference implementation for the Profile
 
 ## Deployment Environment
 
-The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0; for the latter, [Heroku](https://www.heroku.com) is often used as a Node.js hosting environment, as is Amazon Web Services - utilizing something like [AWS Lambda](https://aws.amazon.com/lambda/). 
+The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0. Designed to be a executed as a client side app (i.e. run as a Single Page Application in the browser), reference implementation can be built using a Node.js build environment and then hosted using any CDN (Content Delivery Network) provider.
 
 ### Environment Variables
 
-Whatever environment you choose to utilize, before deploying the reference implementation provided you will need to setup the Node.js environment with the following environment variables. Support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your host Node environment (if supported) or alernatively using whatever configuration tools your hosting environment provides.
+Whatever you choose to utilize, before building the reference implementation provided you will need to setup the Node.js build environment with the following environment variables, and support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your build environment:
 
 - `REACT_APP_DEBUG` (optional): set to `true` te enable debug logging via the Browser console.
 

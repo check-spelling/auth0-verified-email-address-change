@@ -4,7 +4,7 @@ This section of the repository contains reference implementation for the Profile
 
 ## Deployment Environment
 
-The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0; for the latter, [Heroku](https://www.heroku.com) is often used as a Node.js hosting environment, as is Amazon Web Services - utilizing something like [AWS Lambda](https://aws.amazon.com/lambda/). 
+The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0. For the latter, [Heroku](https://www.heroku.com) is often used as a Node.js hosting environment, as is Amazon Web Services - utilizing something like [AWS Lambda](https://aws.amazon.com/lambda/). 
 
 ### Environment Variables
 
