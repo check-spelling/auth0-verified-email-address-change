@@ -2,13 +2,13 @@
 
 This section of the repository contains reference implementation for the Profile Management Client functionality to be implemented external to Auth0. You can use this implementation as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. Client reference implemetation is built as a [Node.js](https://nodejs.org/en/) application using [React](https://reactjs.org/). For a general overview of Profile Management functionality see the readme in the containing [folder](..) **Note: all implementation provided has been built and tested using Node.js version 12.18**
 
-## Deployment Environment
+## Environment
 
 The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0. Designed to be a executed as a client side app (i.e. run as a Single Page Application in the browser), reference implementation can be built using a Node.js build environment and then hosted using any CDN (Content Delivery Network) provider.
 
 ### Environment Variables
 
-Whatever you choose to utilize, before building the reference implementation provided you will need to setup the Node.js build environment with the following environment variables, and support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your build environment. Sample `.env` contents has also been provided for convenience:
+Whatever you choose to utilize, before building the reference implementation provided you will need to setup the Node.js build environment with the following environment variables, and support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your build environment. A sample environment has also been provided for convenience, which can also be used to populate the contents of an `.env` file:
 
 ```
 REACT_APP_DEBUG=true
@@ -24,6 +24,18 @@ REACT_APP_PROFILE_AUDIENCE=https://myorg.com/profile
 - `REACT_APP_AUTH0_CLIENTID`: set to the **Client ID** of the _Profile Management_ Application definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more detais). 
 
 - `REACT_APP_PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more detais). 
+
+### `background.png`
+
+A `background.png` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the page background of the SPA (Single Page Application). Alternatively, the [`index`](public/index) file contained in the `public` folder can be modified and the HTML body style updated to reference an externally hosted background image. 
+
+### `logo.png`
+
+A `logo.png` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the logo used on the SPA (Single Page Application) page. Alternatively, the [`index`](public/index) file contained in the `public` folder can be modified and the logo `div` in the HTML body updated to reference an externally hosted image.
+
+### `favicon.ico`
+
+A `favicon.ico` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the shotcut icon used by the SPA (Single Page Application). Alternatively, the [`index`](public/index) file contained in the `public` folder can be modified and the shortcut icon link in the HTML header updated to reference an externally hosted icon.
 
 ## Issue Reporting
 

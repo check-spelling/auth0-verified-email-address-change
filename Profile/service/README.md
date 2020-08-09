@@ -2,13 +2,13 @@
 
 This section of the repository contains reference implementation for the Profile Management Service functionality to be implemented external to Auth0. You can use this implementation as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. Service reference implemetation is built as a [Node.js](https://nodejs.org/en/) application using [Express](https://expressjs.com/) and [Passport](http://www.passportjs.org/). For a general overview of Profile Management functionality see the readme in the containing [folder](..). **Note: all implementation provided has been built and tested using Node.js version 12.18**
 
-## Deployment Environment
+## Environment
 
 The reference implementation provided is designed to be deployed within your own infrastructure - or at least within an infrastructure that is external to Auth0. For the latter, [Heroku](https://www.heroku.com) is often used as a Node.js hosting environment, as is Amazon Web Services - utilizing something like [AWS Lambda](https://aws.amazon.com/lambda/). 
 
 ### Environment Variables
 
-Whatever environment you choose to utilize, before deploying the reference implementation provided you will need to setup the Node.js environment with the following environment variables. Support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your host Node environment (if supported) or alernatively using whatever configuration tools your hosting environment provides. Sample `.env` content has also been provided for convenience:
+Whatever environment you choose to utilize, before deploying the reference implementation provided you will need to setup the Node.js environment with the following environment variables. Support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your host Node environment (if supported) or alernatively using whatever configuration tools your hosting environment provides. A sample environment has also been provided for convenience, which can also be used to populate the contents of an `.env` file:
 
 ```
 PORT=3030
