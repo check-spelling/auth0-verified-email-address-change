@@ -27,15 +27,15 @@ REACT_APP_PROFILE_AUDIENCE=https://myorg.com/profile
 
 ### `background.png`
 
-A `background.png` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the page background of the SPA (Single Page Application). Alternatively, the [`index`](public/index) file contained in the `public` folder can be modified and the HTML body style updated to reference an externally hosted background image. 
+A `background.png` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the page background of the SPA (Single Page Application). Alternatively, the [`index`](public/index.html) file contained in the `public` folder can be modified and the HTML body style updated to reference an externally hosted background image. 
 
 ### `logo.png`
 
-A `logo.png` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the logo used on the SPA (Single Page Application) page. Alternatively, the [`index`](public/index) file contained in the `public` folder can be modified and the logo `div` in the HTML body updated to reference an externally hosted image.
+A `logo.png` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the logo used on the SPA (Single Page Application) page. Alternatively, the [`index`](public/index.html) file contained in the `public` folder can be modified and the logo `div` in the HTML body updated to reference an externally hosted image.
 
 ### `favicon.ico`
 
-A `favicon.ico` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the shotcut icon used by the SPA (Single Page Application). Alternatively, the [`index`](public/index) file contained in the `public` folder can be modified and the shortcut icon link in the HTML header updated to reference an externally hosted icon.
+A `favicon.ico` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the shotcut icon used by the SPA (Single Page Application). Alternatively, the [`index`](public/index.html) file contained in the `public` folder can be modified and the shortcut icon link in the HTML header updated to reference an externally hosted icon.
 
 ## Issue Reporting
 
