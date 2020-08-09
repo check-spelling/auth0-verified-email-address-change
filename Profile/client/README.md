@@ -8,7 +8,7 @@ The reference implementation provided is designed to be deployed within your own
 
 ### Environment Variables
 
-Whatever you choose to utilize, before building the reference implementation provided you will need to setup the Node.js build environment with the following environment variables, and support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your build environment. Sample `.env` contents has been provided for convenience:
+Whatever you choose to utilize, before building the reference implementation provided you will need to setup the Node.js build environment with the following environment variables, and support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your build environment. Sample `.env` contents has also been provided for convenience:
 
 ```
 REACT_APP_DEBUG=true

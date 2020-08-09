@@ -8,7 +8,7 @@ The reference implementation provided is designed to be deployed within your own
 
 ### Environment Variables
 
-Whatever environment you choose to utilize, before deploying the reference implementation provided you will need to setup the Node.js environment with the following environment variables. Support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your host Node environment (if supported) or alernatively using whatever configuration tools your hosting environment provides. Sample `.env` content has been provided for convenience:
+Whatever environment you choose to utilize, before deploying the reference implementation provided you will need to setup the Node.js environment with the following environment variables. Support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your host Node environment (if supported) or alernatively using whatever configuration tools your hosting environment provides. Sample `.env` content has also been provided for convenience:
 
 ```
 PORT=3030
