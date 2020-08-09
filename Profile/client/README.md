@@ -8,7 +8,14 @@ The reference implementation provided is designed to be deployed within your own
 
 ### Environment Variables
 
-Whatever you choose to utilize, before building the reference implementation provided you will need to setup the Node.js build environment with the following environment variables, and support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your build environment:
+Whatever you choose to utilize, before building the reference implementation provided you will need to setup the Node.js build environment with the following environment variables, and support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your build environment. Sample `.env` contents has been provided for convenience:
+
+```
+REACT_APP_DEBUG=true
+REACT_APP_AUTH0_DOMAIN=mytenant.eu.auth0.com
+REACT_APP_AUTH0_CLIENTID=PmoGgLicuAYTXKS6bFqYl6e1Ui2t4utE
+REACT_APP_PROFILE_AUDIENCE=https://myorg.com/profile
+```
 
 - `REACT_APP_DEBUG` (optional): set to `true` te enable debug logging via the Browser console.
 

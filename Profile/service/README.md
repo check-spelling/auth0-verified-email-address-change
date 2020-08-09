@@ -8,7 +8,19 @@ The reference implementation provided is designed to be deployed within your own
 
 ### Environment Variables
 
-Whatever environment you choose to utilize, before deploying the reference implementation provided you will need to setup the Node.js environment with the following environment variables. Support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your host Node environment (if supported) or alernatively using whatever configuration tools your hosting environment provides.
+Whatever environment you choose to utilize, before deploying the reference implementation provided you will need to setup the Node.js environment with the following environment variables. Support is provided for utilizing a [`.env`](https://www.npmjs.com/package/dotenv) file within your host Node environment (if supported) or alernatively using whatever configuration tools your hosting environment provides. Sample `.env` content has been provided for convenience:
+
+```
+PORT=3030
+DEBUG=true
+AUTH0_API=mytenant.eu.auth0.com
+AUTH0_DOMAIN=mytenant.eu.auth0.com
+AUTH0_CALLBACK=http://myorg.com/Profile
+AUTH0_CLIENT_ID=KrdW64EEOvSdejL8wk72pIqc1kba1ksO
+AUTH0_CLIENT_SECRET=****************************************************************    
+PROFILE_CLIENT=http://myorg.com/Profile
+PROFILE_AUDIENCE=https://myorg.com/profile 
+```
 
 - `PORT` (optional): port number on which the service will run.
 
