@@ -25,6 +25,10 @@ REACT_APP_PROFILE_AUDIENCE=https://myorg.com/profile
 
 - `REACT_APP_PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more detais). 
 
+## Styling
+
+The [`src/index.css`](src/index.css), [`src/App.css`](src/index.css) and [`public/index.html`](publix/index.html) can all be modified do customize the look and feel of the client SPA (Single Page Application). Changes should be made to these files prior to performing a build. Use is also made of the [`react-stepzilla`](https://www.npmjs.com/package/react-stepzilla) component which supports a number of styling options and, additionally, the following files can be utilizied too:   
+
 ### `background.png`
 
 A `background.png` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the page background of the SPA (Single Page Application). Alternatively, the [`index`](public/index.html) file contained in the `public` folder can be modified and the HTML body style updated to reference an externally hosted background image. 
