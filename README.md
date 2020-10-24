@@ -13,7 +13,7 @@ Verified Email Address Change workflow is provided as a customized extensibility
 [Custom Implementation Services](https://auth0.com/docs/services/packages#-custom-implementation-package-) to support functionality not supported out-of-the-box are provided by Auth0 Professional Services, and a wide variety of services are offered to help address a number of use case scenarios. These services can be leveraged to provide you with a complete solution for Verified Email Address Change - in either a stand-alone fashion or in conjunction with other customization. However we also provide you with full design documentation (see below) if you prefer to implement yourself.  
 
 <div align="center">
-  <a href="./Verified%20Email%20Address%20Change%20Design.pdf"><img src="./Verified%20Email%20Address%20Change%20Design.png" alt="Verified Email Address Change workflow in Auth0 - Design Document"></a>
+  <a href="./Verified%20Email%20Address%20Change.pdf"><img src="./Verified%20Email%20Address%20Change%20Design.png" alt="Verified Email Address Change workflow in Auth0 - Design Document"></a>
 </div>
 
 Detailed design documentation (follow link above to access) provides you with a comprehensive set of information that is implementation agnostic. Using this, you and your team can implement Verified Email Address Change workflow whatever the technology stack you currently, or indeed plan, to utilize. The information is provided free of charge and without warranty (either explicit or implied).    
