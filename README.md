@@ -2,7 +2,7 @@
 
 Self-service facility typically provides users with the capability to change one or more aspects of their user profile. Commonly referred to as _MyAccount_ or _MyProfile_ functionality, this often includes the ability for a user to change his/her email address, for cases where an existing email address is no longer valid or a different email address is preferred. Self-service email address change without the proper controls however, can lead to various account management issues, and/or expose security vulnerabilities which can be exploited. 
 
-Verified Email Address Change workflow is provided as a customized extensibility solution, that leverages Auth0 functionality to address the sort of problems that can occur in unverified email address change scenarios. For further information regarding this, or any other Auth0 customized extensibility provided, please feel free to get in touch. 
+The following video (follow link below to access) is provided to illustrate how Verified Email Address Change workflow can be implemented as a customized extensibility solution, that leverages Auth0 functionality to address the sort of problems that can occur in unverified email address change scenarios. Please note that the video is provided for illustrative purpose and that actual workflow as part of the reference implementation contained in this repository may be somewhat different. For further information on this or any other Auth0 customized extensibility provided, please feel free to get in touch. 
 
 <div align="center">
   <a href="https://auth0-1.wistia.com/medias/aycyjyjxqh"><img src="./Verified%20Email%20Address%20Change.png" alt="Verified Email Address Change workflow in Auth0"></a>

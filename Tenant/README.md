@@ -4,7 +4,7 @@ This section of the repository contains files for [Auth0 Tenant](https://auth0.c
 
 ## [`clients`](./clients)
 
-This folder contains the [Auth0 Application](https://auth0.com/docs/applications) (a.k.a. Client) definitions, for both the _Profile Managemnt_ client and the _Profile Management Service_ implemented external (to Auth0) as part of Verified Email Address Change, and as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there are a number of specific aspects for each client definition that should be reviewed and customized:
+This folder contains the [Auth0 Application](https://auth0.com/docs/applications) (a.k.a. Client) definitions, for both the _Profile Management_ and _Profile Manage Email_  as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw) for Verified Email Address Change. Prior to deployment there are a number of specific aspects for each client definition that should be reviewed and customized:
 
 - _**Allowed Callback URLs**_ (`callbacks`; see [Application Settings](https://auth0.com/docs/dashboard/reference/settings-application) for further details) should be modified, and `localhost` definitions should be replaced with the respective domain where each asset is hosted.
 
@@ -14,14 +14,14 @@ This folder contains the [Auth0 Application](https://auth0.com/docs/applications
 
 ## [`resource-servers`](./resource-servers)
 
-This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the _Profile Managemnt API_ route(s) - implemented extrnal to Auth0 - that forms part of the Profile Management Service for Verified Email Address Change as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there is one specific aspect for the reseource server definition that should be reviewed and customized:
+This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the _Profile Managemnt API_ route(s) - implemented extrnal to Auth0 - that forms part of the Profile Management Service for Verified Email Address Change as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there is one specific aspect for the reseource server definition that should be reviewed and customized:
 
 - _**Identifier**_ (`identifier`; see [API Settings](https://auth0.com/docs/dashboard/reference/settings-api) for further details) should be modified, and `localhost` definitions should be replaced. The identifier for an API is in URI format - this is not a URL to the API - and the recommendation would be to use your organizations domain name here as the replacement.
 
 
 ## [`rules`](./rules)
 
-This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design document](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Once deployed, the following Rule [Settings](https://auth0.com/docs/rules/guides/configuration#configure-values) will nedd to be configued:
+This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Once deployed, the following Rule [Settings](https://auth0.com/docs/rules/guides/configuration#configure-values) will nedd to be configued:
 
 - `DEBUG` (optional): set to `true` te enable debug logging via use of the Auth0 [Real-time Webtask Logs Extension](https://auth0.com/docs/extensions/realtime-webtask-logs).
 
@@ -34,8 +34,6 @@ This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essenti
 - `PROFILE_REDIRECT`: set to the base URL of the proprietry Profile Management functionality implemented outside of Auth0 (e.g. `https://hipster.cevolution.co.uk/Profile`). Reference implementation expects the following organization of functionality under this URL (see [Profile Management](../Profile) for further details)
 
 	- `client`: the [Profile Management Client](../Profile/client) 
-
-	- `service`: the [Profile Management Service](../Profile/service)
 
 ## Issue Reporting
 
