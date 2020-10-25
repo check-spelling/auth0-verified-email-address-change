@@ -35,20 +35,22 @@ function VEAChange(user, context, callback) {
         Promise.resolve(global.verifyJWT(context.request.body.companion))
         .then(function (decoded) {
           LOG_TAG = LOG_TAG + '[EMAIL_CHANGE]: ';
-          DEBUG(LOG_TAG, "Changing Email");
+          var policy = decoded[configuration.PROFILE_AUDIENCE + '/policy'];
+          DEBUG(LOG_TAG, "Changing Email; policy = ", policy);
+          policy = (policy) ? JSON.parse(policy) : {};
 
           /* Link accounts? */
           if (
-            decoded.policy &&
-            decoded.policy.email &&
-            decoded.policy.email.change &&
-            decoded.policy.email.change.email === user.email) {
+            policy &&
+            policy.email &&
+            policy.email.change &&
+            policy.email.change.email === user.email) {
             managementAPI.users.update({
               id: decoded.sub
             }, {
               'email': user.email,
               'email_verified': user.email_verified,
-              'connection': decoded.policy.email.change.connection,
+              'connection': policy.email.change.connection,
               'user_metadata': {
                 'emailNew': null
               }
@@ -87,6 +89,7 @@ function VEAChange(user, context, callback) {
           user.user_metadata = user.user_metadata || {};
           Promise.resolve(new 
           Promise(function (resolve, reject) {
+            context.request.query = context.request.query || {}; 
             DEBUG(LOG_TAG, "PROFILE_AUDIENCE = ", configuration.PROFILE_AUDIENCE);
             DEBUG(LOG_TAG, "audience =", context.request.query.audience);
             switch (context.request.query.audience) {
@@ -173,8 +176,7 @@ function VEAChange(user, context, callback) {
                         DEBUG(LOG_TAG,"User = ", _user);
                         DEBUG(LOG_TAG,"Initiating Email Change trigger");
                         context.redirect = context.redirect || {};
-//                        context.redirect.url = configuration.PROFILE_REDIRECT +
-                        context.redirect.url = "http://localhost:3000";
+                        context.redirect.url = configuration.PROFILE_REDIRECT + '/client';
                       });
                       resolve();
                     })
