@@ -10,13 +10,6 @@ This section of the repository contains reference implementation for the Profile
 
 The [`client`](client) folder contains reference [Node.js](https://nodejs.org/en/) implementation for the interactive Profile Client application which provides the User Interface Experience (UI/UX) as part of Verified Email Address Change [Redirect](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.v0omkqzfjvqw) processing. For further details please refer to the [readme](Client) contained in the folder.
 
-## Service
-
-The [`service`](service) folder contains reference [Node.js](https://nodejs.org/en/) implementation for the Profile Service which provides backend processing as part of Verified Email Address Change [Redirect](https://docs.google.com/document/d/1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw/edit#bookmark=id.v0omkqzfjvqw) processing. For further details please refer to the [readme](service) contained in the folder.
-
-
- and the [Express](https://expressjs.com/) framework
-
 ## Issue Reporting
 
 If you have found a bug or if you have a feature request, please report them via the issues section of this repository. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
