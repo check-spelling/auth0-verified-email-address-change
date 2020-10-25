@@ -1,6 +1,6 @@
 # Profile Management
 
-This section of the repository contains reference implementation for the Profile Management functionality to be implemented external to Auth0. You can use it as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. The diagram below illustrates the architecture associated with the implementation provided. As can be seen, there is a Profile Management Client and an associated Profile Management Service, which are used in conjunction with the corresponding Auth0 [Tenant assests](../Tenant). **Note: all implementation provided has been built and tested using [Node.js](https://nodejs.org/en/) version 12.18**
+This section of the repository contains reference implementation for the Profile Management functionality to be implemented external to Auth0. You can use it as-is, or incorporate as part of your own/existing functionality in order to support Verfiried Email Address Change in Auth0. The diagram below illustrates the architecture associated with the implementation provided. As can be seen, there is a Profile Management Client which is used in conjunction with the corresponding Auth0 [Tenant assests](../Tenant). **Note: all implementation provided has been built and tested using [Node.js](https://nodejs.org/en/) version 12.18**
 
 <p align="center">
 <img src="./Architecture.png">
