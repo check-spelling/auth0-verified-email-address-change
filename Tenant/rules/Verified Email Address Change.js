@@ -25,17 +25,63 @@ function VEAChange(user, context, callback) {
   // State Machine
   switch (context.protocol) {
     case 'redirect-callback': {
-      DEBUG(LOG_TAG, "(redirect-callback); context =", context.clientID);
-      callback(null, user, context);
+      LOG_TAG = LOG_TAG + '[REDIRECT_CALLBACK]: ';
+      DEBUG(LOG_TAG, "context =", context.clientID);
+      DEBUG(LOG_TAG, "Evaluating Email Change using ", user.user_id);
+      if (
+        context.request &&
+        context.request.body &&
+        context.request.body.companion) {
+        Promise.resolve(global.verifyJWT(context.request.body.companion))
+        .then(function (decoded) {
+          LOG_TAG = LOG_TAG + '[EMAIL_CHANGE]: ';
+          DEBUG(LOG_TAG, "Changing Email");
+
+          /* Link accounts? */
+          if (
+            decoded.policy &&
+            decoded.policy.email &&
+            decoded.policy.email.change &&
+            decoded.policy.email.change.email === user.email) {
+            managementAPI.users.update({
+              id: decoded.sub
+            }, {
+              'email': user.email,
+              'email_verified': user.email_verified,
+              'connection': decoded.policy.email.change.connection,
+              'user_metadata': {
+                'emailNew': null
+              }
+            })
+            .then(function () {
+              callback(null, user, context);
+            })
+            .catch(function (error) {
+              console.error(LOG_TAG, "Error changing email = ", error);
+              callback(new UnauthorizedError(0, error), user, context);
+            });
+          } else {
+            DEBUG(LOG_TAG, "Incorrect companion; ignore");
+	          callback(null, user, context);
+          }
+        })
+        .catch(function (error) {
+          console.error(LOG_TAG, error);
+          callback(new UnauthorizedError(0, error), user, context);
+      	});
+      } else {
+        DEBUG(LOG_TAG,"Skipped");
+        callback(null, user, context);
+      }
     } break;
 
     default: {
-      DEBUG(LOG_TAG, "PROFILE_SERVICE = ", configuration.PROFILE_SERVICE);
       DEBUG(LOG_TAG, "PROFILE_CLIENT = ", configuration.PROFILE_CLIENT);
+      DEBUG(LOG_TAG, "EMAIL_CLIENT = ", configuration.EMAIL_CLIENT);
       DEBUG(LOG_TAG, "context =", context.clientID);
       switch(context.clientID) {
-        case configuration.PROFILE_SERVICE:
-        case configuration.PROFILE_CLIENT: {
+        case configuration.PROFILE_CLIENT:
+        case configuration.EMAIL_CLIENT: {
           LOG_TAG = LOG_TAG + '[PROFILE]: ';
 		      user.app_metadata = user.app_metadata || {};
           user.user_metadata = user.user_metadata || {};
@@ -46,10 +92,10 @@ function VEAChange(user, context, callback) {
             switch (context.request.query.audience) {
               case configuration.PROFILE_AUDIENCE: {
                 LOG_TAG = LOG_TAG + '[PROFILE_AUDIENCE]: ';
+                DEBUG(LOG_TAG, "Evaluating for ", user.email);
                 switch (context.connection) {
                   case "email": {
-                    DEBUG(LOG_TAG, "Evaluating Email Address Change event for ", 
-                      user.email);
+                    LOG_TAG = LOG_TAG + '[EMAIL]: ';
                     managementAPI.getUsers({
                       search_engine: 'v3',
                       fields: "user_id,email,identities",
@@ -68,6 +114,7 @@ function VEAChange(user, context, callback) {
 
                             user.app_metadata.policy.email = 
                             user.app_metadata.policy.email || {};
+                            user.app_metadata.policy.email.change = true;
                             user.app_metadata.policy.email.companion = _user.user_id;
 
                             user.app_metadata.policy.login_hint = _user.email;
@@ -77,8 +124,7 @@ function VEAChange(user, context, callback) {
                             user.app_metadata.policy.connection.
                               push(identity.connection);
                               
-                            context.idToken[
-                              configuration.PROFILE_AUDIENCE + '/policy'] =
+                            context.idToken[configuration.PROFILE_AUDIENCE + '/policy'] =
                               	JSON.stringify(user.app_metadata.policy);
                           } 
                         });
@@ -91,17 +137,17 @@ function VEAChange(user, context, callback) {
                   } break;
 
                   default:{
-                    DEBUG(LOG_TAG, "Evaluating Email Address Change for ", 
-                      user.email);
                     if (user.user_metadata.emailNew) {
                       user.app_metadata.policy = 
                       user.app_metadata.policy || {};
                       
                       user.app_metadata.policy.email = 
                       user.app_metadata.policy.email || {};
-                      user.app_metadata.policy.email.change = true;
+                      user.app_metadata.policy.email.change = 
+                      user.app_metadata.policy.email.change || {};
+                      user.app_metadata.policy.email.change.email = user.user_metadata.emailNew;
+                      user.app_metadata.policy.email.change.connection = context.connection;
 
-                      user.app_metadata.policy.connection = context.connection;
                       context.idToken[configuration.PROFILE_AUDIENCE + '/policy'] = 
                       context.accessToken[configuration.PROFILE_AUDIENCE + '/policy'] = 
                         JSON.stringify(user.app_metadata.policy);
@@ -114,8 +160,8 @@ function VEAChange(user, context, callback) {
               default: {
                 switch (context.connection) {
                   case "email": {
-                    // Event trigger required?
-                    DEBUG(LOG_TAG,"Evaluating Event trigger");
+                    // Email Change Event detected?
+                    DEBUG(LOG_TAG,"Evaluating for Email Address Change");
                     managementAPI.getUsers({
                       search_engine: 'v3',
                       fields: "user_id",
@@ -125,10 +171,10 @@ function VEAChange(user, context, callback) {
                     .then(function (users) {
                       users.forEach(function (_user) {
                         DEBUG(LOG_TAG,"User = ", _user);
-                        DEBUG(LOG_TAG,"Initiating Event trigger");
+                        DEBUG(LOG_TAG,"Initiating Email Change trigger");
                         context.redirect = context.redirect || {};
-                        context.redirect.url = configuration.PROFILE_REDIRECT +
-                          "/service/event";
+//                        context.redirect.url = configuration.PROFILE_REDIRECT +
+                        context.redirect.url = "http://localhost:3000";
                       });
                       resolve();
                     })

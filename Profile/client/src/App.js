@@ -11,75 +11,69 @@ class App extends Component {
     super(props);
 
     this.state = {
-      update: true
+      steps: []
     };
   }
 
   /* Use dynamic loading as descrinbed in https://www.robinwieruch.de/react-fetching-data/
   */
   componentDidMount() {
+    var steps=[];
     var that=this;
     that.props.auth0Client.handleRedirectCallback().then(({appState}) => {
       DEBUG("appState=", appState);
-      that.props.context.appState = appState;
-      that.props.context.auth0Client = that.props.auth0Client;
-      that.props.context.steps = [{
+      steps = [{
         name: "Finish", 
-        component: <Success context={that.props.context}/>}];
+        component: <Success auth0Client={that.props.auth0Client} appState={appState} />}];
 
       // Get logged in user profile
-      that.props.context.auth0Client.getUser().then(user => {
+      that.props.auth0Client.getUser().then(user => {
         var policy = user[process.env.REACT_APP_PROFILE_AUDIENCE+"/policy"];
 
-        // Policy defined?
-        if (policy) {
-          that.props.context.policy = JSON.parse(policy);
+        policy = (policy) ? JSON.parse(policy) : {};
 
-          /*  Email Change?
-          */
-          if (
-            that.props.context.policy &&
-            that.props.context.policy.email) {
-            that.props.context.steps.unshift({
-              name: 'Email Change', 
-              component: <EmailChange context={that.props.context} />});
-          }
+         /*  Email Change?
+        */
+        if (
+          policy &&
+          policy.email &&
+          policy.email.change) {
+          steps.unshift({
+            name: 'Email Change', 
+            component: <EmailChange auth0Client={that.props.auth0Client} appState={appState} policy={policy} />});
         }
-        that.setState({
-          update: true
-        });                      
+
+        that.setState({'steps': steps});    
       }).catch((error) => {
         DEBUG(error);
-        that.props.context.steps = [{
+        steps = [{
           name: "Finish", 
-          component: <Failure context={that.props.context} error={error}/>}];
-        that.setState({
-          update: true
-        });                      
+          component: <Failure error={error}/>}];
+        that.setState({'steps': steps});                      
       });
     }).catch((error) => {
       DEBUG(error);
       switch(error.error){
         case 'access_denied':
-          that.props.context.steps = [{
+        case 'invalid_request':
+          steps = [{
             name: "Finish", 
-            component: <Failure context={that.props.context} error={error}/>}];
-          that.setState({
-            update: true
-          });                      
+            component: <Failure error={error}/>}];
+          that.setState({'steps': steps});                      
           break;
 
         case 'login_required':
         case 'consent_required':
         default:
           that.props.auth0Client.loginWithRedirect({
-            appState: that.props.context.appState
+            appState: that.props.appState
           })
           .catch(error => {
             DEBUG(error);
-            that.props.context.steps = [{
+            steps = [{
               name: "Finish", 
-              component: <Failure context={that.props.context} error={error}/>}];
+              component: <Failure error={error}/>}];
+            that.setState({'steps': steps});                      
           });
           break;
       }
@@ -91,18 +85,21 @@ class App extends Component {
        CSS is used (see App.css) to remove and/or align buttons for the various pages. For more information regarding this
        technique, see: https://github.com/newbreedofgeek/react-stepzilla/issues/28
      */
-    if (this.props.context.steps) {
+    if (
+      this.state.steps &&
+      this.state.steps.length) {
       return(
         <div>
           <div className='step-progress'>
-            <StepZilla steps={this.props.context.steps} showNavigation={true} showSteps={true}/>
+            <StepZilla steps={this.state.steps} showNavigation={true} showSteps={true}/>
           </div>        
         </div>                
       );
-    } else {
-      return null;
-    }
-  }
+    } 
+    else 
+    // Nothing yet to display.  
+    return null;
+ }
 }
 
 export default App;
