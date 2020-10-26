@@ -25,6 +25,8 @@ This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essenti
 
 - `DEBUG` (optional): set to `true` te enable debug logging via use of the Auth0 [Real-time Webtask Logs Extension](https://auth0.com/docs/extensions/realtime-webtask-logs).
 
+- `EMAIL_CLIENT`: set to the **Client ID** of the _Profile Manage Email_ Application definition in Auth0.
+
 - `PROFILE_CLIENT`: set to the **Client ID** of the _Profile Management_ Application definition in Auth0.
 
 - `PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0. Implementation will also use this value as the Namespace for the Profile Management [Custom Claims](https://auth0.com/docs/tokens/guides/create-namespaced-custom-claims) added to the [ID Token](https://auth0.com/docs/tokens/concepts/id-tokens) and [Access Token](https://auth0.com/docs/tokens/concepts/access-tokens).

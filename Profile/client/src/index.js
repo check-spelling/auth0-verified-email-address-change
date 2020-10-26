@@ -12,26 +12,21 @@ import Failure from './failure';
 import { Auth0Provider } from "./react-auth0-spa";
 import createAuth0Client from '@auth0/auth0-spa-js';
                                             // https://www.npmjs.com/package/@auth0/auth0-spa-js
-import { parse } from 'querystring';        // https://nodejs.org/api/querystring.html
 import registerServiceWorker from './registerServiceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-var query=parse(require('url').parse(window.location.href).query);
+var query=new URLSearchParams(window.location.search);
 
 createAuth0Client({
   domain: process.env.REACT_APP_AUTH0_DOMAIN,
   client_id: process.env.REACT_APP_AUTH0_CLIENTID,
   audience: process.env.REACT_APP_PROFILE_AUDIENCE,
-  login_hint: query.login_hint,
-  connection: query.connection,
-  prompt: query.prompt,
   redirect_uri: (
     window.location.port)?
     window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + window.location.pathname:
     window.location.protocol + '//' + window.location.hostname + window.location.pathname
 }).then(auth0Client => {
-  console.log("Initial state = ",query.state);
   var appState = {
-    state: query.state
+    state: query.get("state")
   };
 
   /* Use React Router property passing as described here:

@@ -99,7 +99,7 @@ class App extends Component {
     else 
     // Nothing yet to display.  
     return null;
- }
+  }
 }
 
 export default App;

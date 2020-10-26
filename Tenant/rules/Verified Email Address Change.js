@@ -79,8 +79,10 @@ function VEAChange(user, context, callback) {
 
     default: {
       DEBUG(LOG_TAG, "PROFILE_CLIENT = ", configuration.PROFILE_CLIENT);
+      DEBUG(LOG_TAG, "EMAIL_CLIENT = ", configuration.EMAIL_CLIENT);
       DEBUG(LOG_TAG, "context =", context.clientID);
       switch(context.clientID) {
+        case configuration.EMAIL_CLIENT:
         case configuration.PROFILE_CLIENT: {
           LOG_TAG = LOG_TAG + '[PROFILE]: ';
 		      user.app_metadata = user.app_metadata || {};
