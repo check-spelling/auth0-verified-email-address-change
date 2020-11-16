@@ -39,7 +39,7 @@ function VEAChange(user, context, callback) {
           DEBUG(LOG_TAG, "Changing Email; policy = ", policy);
           policy = (policy) ? JSON.parse(policy) : {};
 
-          /* Link accounts? */
+          /* Update email address? */
           if (
             policy &&
             policy.email &&
