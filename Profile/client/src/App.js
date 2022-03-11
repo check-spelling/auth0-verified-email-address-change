@@ -15,7 +15,7 @@ class App extends Component {
     };
   }
 
-  /* Use dynamic loading as descrinbed in https://www.robinwieruch.de/react-fetching-data/
+  /* Use dynamic loading as described in https://www.robinwieruch.de/react-fetching-data/
   */
   componentDidMount() {
     var steps=[];
