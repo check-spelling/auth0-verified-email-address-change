@@ -27,7 +27,7 @@ REACT_APP_PROFILE_AUDIENCE=https://myorg.com/profile
 
 ## Styling
 
-The files [`src/index.css`](src/index.css), [`src/App.css`](src/App.css) and [`public/index.html`](public/index.html) can all be modified do customize the look and feel of the client SPA (Single Page Application). Changes should be made to these prior to performing a build. Use is also made of the [`react-stepzilla`](https://www.npmjs.com/package/react-stepzilla) component which supports a number of styling options and, additionally, the following files can be utilizied too:   
+The files [`src/index.css`](src/index.css), [`src/App.css`](src/App.css) and [`public/index.html`](public/index.html) can all be modified do customize the look and feel of the client SPA (Single Page Application). Changes should be made to these prior to performing a build. Use is also made of the [`react-stepzilla`](https://www.npmjs.com/package/react-stepzilla) component which supports a number of styling options and, additionally, the following files can be utilized too:   
 
 ### `background.png`
 
