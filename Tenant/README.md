@@ -31,7 +31,7 @@ This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essenti
 
 - `PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0. Implementation will also use this value as the Namespace for the Profile Management [Custom Claims](https://auth0.com/docs/tokens/guides/create-namespaced-custom-claims) added to the [ID Token](https://auth0.com/docs/tokens/concepts/id-tokens) and [Access Token](https://auth0.com/docs/tokens/concepts/access-tokens).
 
-- `PROFILE_REDIRECT`: set to the base URL of the proprietry Profile Management functionality implemented outside of Auth0 (e.g. `https://hipster.cevolution.co.uk/Profile`). Reference implementation expects the following organization of functionality under this URL (see [Profile Management](../Profile) for further details)
+- `PROFILE_REDIRECT`: set to the base URL of the proprietary Profile Management functionality implemented outside of Auth0 (e.g. `https://hipster.cevolution.co.uk/Profile`). Reference implementation expects the following organization of functionality under this URL (see [Profile Management](../Profile) for further details)
 
 	- `client`: the [Profile Management Client](../Profile/client) 
 
