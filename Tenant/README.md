@@ -14,14 +14,14 @@ This folder contains the [Auth0 Application](https://auth0.com/docs/applications
 
 ## [`resource-servers`](./resource-servers)
 
-This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the _Profile Managemnt API_ route(s) - implemented extrnal to Auth0 - that forms part of the Profile Management Service for Verified Email Address Change as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there is one specific aspect for the reseource server definition that should be reviewed and customized:
+This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the _Profile Management API_ route(s) - implemented external to Auth0 - that forms part of the Profile Management Service for Verified Email Address Change as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there is one specific aspect for the resource server definition that should be reviewed and customized:
 
 - _**Identifier**_ (`identifier`; see [API Settings](https://auth0.com/docs/dashboard/reference/settings-api) for further details) should be modified, and `localhost` definitions should be replaced. The identifier for an API is in URI format - this is not a URL to the API - and the recommendation would be to use your organizations domain name here as the replacement.
 
 
 ## [`rules`](./rules)
 
-This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Once deployed, the following Rule [Settings](https://auth0.com/docs/rules/guides/configuration#configure-values) will nedd to be configued:
+This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Once deployed, the following Rule [Settings](https://auth0.com/docs/rules/guides/configuration#configure-values) will need to be configured:
 
 - `DEBUG` (optional): set to `true` te enable debug logging via use of the Auth0 [Real-time Webtask Logs Extension](https://auth0.com/docs/extensions/realtime-webtask-logs).
 
@@ -31,7 +31,7 @@ This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essenti
 
 - `PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0. Implementation will also use this value as the Namespace for the Profile Management [Custom Claims](https://auth0.com/docs/tokens/guides/create-namespaced-custom-claims) added to the [ID Token](https://auth0.com/docs/tokens/concepts/id-tokens) and [Access Token](https://auth0.com/docs/tokens/concepts/access-tokens).
 
-- `PROFILE_REDIRECT`: set to the base URL of the proprietry Profile Management functionality implemented outside of Auth0 (e.g. `https://hipster.cevolution.co.uk/Profile`). Reference implementation expects the following organization of functionality under this URL (see [Profile Management](../Profile) for further details)
+- `PROFILE_REDIRECT`: set to the base URL of the proprietary Profile Management functionality implemented outside of Auth0 (e.g. `https://hipster.cevolution.co.uk/Profile`). Reference implementation expects the following organization of functionality under this URL (see [Profile Management](../Profile) for further details)
 
 	- `client`: the [Profile Management Client](../Profile/client) 
 
