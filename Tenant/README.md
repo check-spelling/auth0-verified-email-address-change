@@ -21,7 +21,7 @@ This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for
 
 ## [`rules`](./rules)
 
-This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Once deployed, the following Rule [Settings](https://auth0.com/docs/rules/guides/configuration#configure-values) will nedd to be configued:
+This folder contains the [Auth0 Rule](https://auth0.com/docs/rules) that essentially drives Verified Email Address Change, as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Once deployed, the following Rule [Settings](https://auth0.com/docs/rules/guides/configuration#configure-values) will nedd to be configured:
 
 - `DEBUG` (optional): set to `true` te enable debug logging via use of the Auth0 [Real-time Webtask Logs Extension](https://auth0.com/docs/extensions/realtime-webtask-logs).
 
