@@ -152,7 +152,7 @@ class EmailChange extends Component {
         return(
           <div className="stepEmail">
             <div style={{textAlign: 'center', fontSize: '20px', lineHeight: '1', paddingBottom: '20px'}}>
-              <p>Email Address change has been sucessfully queued.</p>
+              <p>Email Address change has been successfully queued.</p>
               <p>Click Next to continue.</p>
             </div>
           </div>               
