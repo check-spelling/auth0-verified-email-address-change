@@ -14,7 +14,7 @@ This folder contains the [Auth0 Application](https://auth0.com/docs/applications
 
 ## [`resource-servers`](./resource-servers)
 
-This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the _Profile Managemnt API_ route(s) - implemented extrnal to Auth0 - that forms part of the Profile Management Service for Verified Email Address Change as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there is one specific aspect for the reseource server definition that should be reviewed and customized:
+This folder contains the [Auth0 API](https://auth0.com/docs/apis) definition for the _Profile Managemnt API_ route(s) - implemented external to Auth0 - that forms part of the Profile Management Service for Verified Email Address Change as described in the [design documentation](https://drive.google.com/open?id=1DtjpHFTwK6wN0B6BlaaXpbIFbU0BlUagDlymP0RGZgw). Prior to deployment there is one specific aspect for the reseource server definition that should be reviewed and customized:
 
 - _**Identifier**_ (`identifier`; see [API Settings](https://auth0.com/docs/dashboard/reference/settings-api) for further details) should be modified, and `localhost` definitions should be replaced. The identifier for an API is in URI format - this is not a URL to the API - and the recommendation would be to use your organizations domain name here as the replacement.
 
