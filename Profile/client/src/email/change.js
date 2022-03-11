@@ -139,7 +139,7 @@ class EmailChange extends Component {
         return(
           <div className="stepEmail">
             <div style={{textAlign: 'center', fontSize: '20px', lineHeight: '1', paddingBottom: '20px'}}>
-              <p>An error occured whilst attempting to perform Email Address change. </p>
+              <p>An error occurred whilst attempting to perform Email Address change. </p>
               <p>Please click the 'Change Email' button below to try the change again, </p>
               <p>alternatively click 'Next' if you wish to skip the change for now.</p>
               <button style={{backgroundColor: "greenyellow", paddingTop: 9, paddingBottom: 9}} onClick={this.handleClick}>
