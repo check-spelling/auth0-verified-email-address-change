@@ -21,9 +21,9 @@ REACT_APP_PROFILE_AUDIENCE=https://myorg.com/profile
 
 - `REACT_APP_AUTH0_DOMAIN`: set to the **Domain** name of your Auth0 Tenant. If you are using a [Custom Domain](https://auth0.com/docs/custom-domains) for your Auth0 Tenant then it should be set this value. 
 
-- `REACT_APP_AUTH0_CLIENTID`: set to the **Client ID** of the _Profile Management_ Application definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more detais). 
+- `REACT_APP_AUTH0_CLIENTID`: set to the **Client ID** of the _Profile Management_ Application definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more details). 
 
-- `REACT_APP_PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more detais). 
+- `REACT_APP_PROFILE_AUDIENCE`: set to the **API Audience** of the _Profile Management API_ definition in Auth0 (see [Auth0 Tenant Configuration](../../Tenant) for more details). 
 
 ## Styling
 
