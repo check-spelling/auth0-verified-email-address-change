@@ -39,7 +39,7 @@ A `logo.png` file can also be placed into the [`public`](public) folder prior to
 
 ### `favicon.ico`
 
-A `favicon.ico` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the shotcut icon used by the SPA (Single Page Application). Alternatively, the [`index`](public/index.html) file contained in the `public` folder can be modified and the shortcut icon link in the HTML header updated to reference an externally hosted icon.
+A `favicon.ico` file can also be placed into the [`public`](public) folder prior to build, which will allow you to customize the shortcut icon used by the SPA (Single Page Application). Alternatively, the [`index`](public/index.html) file contained in the `public` folder can be modified and the shortcut icon link in the HTML header updated to reference an externally hosted icon.
 
 ## Issue Reporting
 
